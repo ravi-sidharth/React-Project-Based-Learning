@@ -1,5 +1,7 @@
 
 import {Chai} from './chai'
+import Welcome from './Welcome'
+import Hello from './Hello';
 function App() {
   return (
     <>
@@ -7,6 +9,8 @@ function App() {
         Hello World!
       </h1>
       <Chai/>
+      <Welcome />
+      <Hello/>
     </>
   );
 }

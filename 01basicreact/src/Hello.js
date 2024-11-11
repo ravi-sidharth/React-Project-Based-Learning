@@ -1,13 +1,13 @@
 import React from "react";
 
-const Hello = (pros)=> {
-    console.log(pros)
+const Hello = ({name, heroName})=> {
+    // console.log(props)
+    // const{name , heroName} =props
  
     return (
         <div>
-            
-            <p>Hello {pros.name} a.k.a {pros.heroName}</p>
-            {pros.children}
+            <p>Hello {name} a.k.a {heroName}</p>
+            {/* {pros.children} */}
         </div>        
     )
 

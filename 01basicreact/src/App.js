@@ -7,6 +7,13 @@ import Counter from './Counter'
 import FunctionClick from './FunctionClick'
 import ClassClick from './ClassClick'
 import EventBind from './EventBind'
+import ParentComponent from './ParentComponent'
+import UserGreeting from './UserGreeting'
+import NameList from './NameList'
+import StyleSheet from './StyleSheet'
+import Inline from './Inline'
+import './appStyles.css'
+import styles from './appStyles.module.css'
 function App() {
   return (
     <>
@@ -19,17 +26,24 @@ function App() {
       <Welcome name="Monu" heroName="Hi man" /> */}
       {/* <Hello name="Ravi" heroName="Superman">
       <h1>I'm a good boy</h1>
-        I'm a good boy
+       <p> I'm a good boy</p>
       </Hello>
       <Hello name="Sourabh" heroName="Batman"> 
           <button>Action</button>
       </Hello>
       <Hello name="Deepak" heroName="SpiderMan" /> */}
       {/* <Message /> */}
-      <Counter />
-      <FunctionClick />
-      <ClassClick/>
-      <EventBind/>
+      {/* <Counter /> */}
+      {/* <FunctionClick /> */}
+      {/* <ClassClick/> */}
+      {/* <EventBind/> */}
+      {/* <ParentComponent/> */}
+      {/* <UserGreeting/> */}
+      {/* <NameList /> */}
+      {/* <StyleSheet primary={true} /> */}
+      <Inline/>
+      <h1 className='error'>Error</h1>
+      <h1 className={styles.success}>Success</h1>
     
     </>
   );

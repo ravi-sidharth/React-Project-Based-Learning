@@ -1,14 +1,20 @@
-import React, { Component } from 'react'
+import React,{Component} from 'react'
 
 class EventBind extends Component {
-    EventClick(){
-        console.log(this);
-        console.log("button EventClick")
+    //     ClickHandler(){
+    //     console.log(this);
+    //     console.log("button ClickHandler")
         
-        this.setState({
-            message:"Good Bye"
-        })
+    //     this.setState({
+    //         message:"Goodbye!"
+    //  })
         
+    // }
+
+    ClickHandler = () => {
+      this.setState({
+        message:"Goodbye!"
+      })
     }
     constructor(props) {
       super(props)
@@ -16,6 +22,7 @@ class EventBind extends Component {
       this.state = {
          message:"Hello"
       }
+      this.ClickHandler = this.ClickHandler.bind(this)
     }
 
     
@@ -23,7 +30,9 @@ class EventBind extends Component {
     return (
       <div>
             <div>{this.state.message}</div>
-            <button onClick={this.EventClick.bind(this)}>Click</button>
+            {/* <button onClick={this.ClickHandler.bind(this)}>Click</button> */}
+            {/* <button onClick={()=> this.ClickHandler()}>Click</button> */}
+            <button onClick={this.ClickHandler}>Click</button>
     
       </div>
     )

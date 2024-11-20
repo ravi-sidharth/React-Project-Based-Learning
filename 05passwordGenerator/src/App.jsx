@@ -1,16 +1,16 @@
-import { useState, useCallback, useEffect ,useRef} from 'react'
+import {useState, useCallback, useEffect ,useRef} from 'react'
 import './App.css'
 
 function App() {
   const [length, setLength] = useState(8)
-  const [numberAllowed ,setNumberAllowed] = useState(false)
-  const [charAllowed ,setCharAllowed] = useState(false)
-  const [password ,setPassword] = useState("")
+  const [numberAllowed, setNumberAllowed] = useState(false)
+  const [charAllowed, setCharAllowed] = useState(false)
+  const [password, setPassword] = useState("")
 
   // useRef hook 
-  const passwordRef =useRef(null) 
+  const passwordRef = useRef(null) 
 
-  const passwordGenerator =useCallback(()=> {
+  const passwordGenerator = useCallback(()=> {
     let pass =""
     let str = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz"
 
@@ -23,19 +23,19 @@ function App() {
     }
     setPassword(pass)
 
-  },[length,numberAllowed,charAllowed,setPassword])
+  },[length,numberAllowed,charAllowed])
 
   const copyPasswordToClipboard =useCallback(()=> {
     // Jab Pura text select Karna ho 
     passwordRef.current?.select()
     // Jab kuchh text select karna ho us case me ham ye method use kar sakte he iske liye upr select() bhi likhna padega iske sath. 
-    passwordRef.current?.setSelectionRange(4,20)
+    // passwordRef.current?.setSelectionRange(4,20)
     // window.navigator.clipboard.writeText(password)
   }, [password])
 
   useEffect(()=>{
     passwordGenerator()
-  },[length,numberAllowed,charAllowed,passwordGenerator])
+  },[length,numberAllowed,charAllowed])
 
   return (
     <>
@@ -47,7 +47,7 @@ function App() {
         </div>
         <div className='flex text-sm gap-x-2'>
           <div className='flex item-center gap-x-1'>
-            <input className='cursor-pointer ' type="range" min={8} max={100} value={length} onChange={(e)=>setLength(e.target.value)} />
+            <input className='cursor-pointer ' type="range" min={8} max={50} value={length} onChange={(e)=>setLength(e.target.value)} />
             <label htmlFor="">Length: {length}</label>
           </div>
           <div className='flex items-center gap-x-1'>

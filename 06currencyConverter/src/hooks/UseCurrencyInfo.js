@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react"
 let currency ="inr"
-let url = `https://cdn.jsdelivr.net/gh/fawazahmed0/currency-api@1/latest/currencies/${currency}.json`
+let url = `https://api.freecurrencyapi.com/v1/currencies?apikey=fca_live_7dCqhNdbHkG5K5MpZ1rvS9QAigfh71VlDFtUatXE&currencies=EUR%2CUSD%2CCAD`
+
 
 function UseCurrencyInfo(currency) {
     const [data,setData]=useState({})
@@ -10,11 +11,8 @@ function UseCurrencyInfo(currency) {
         .then((data)=>{
             setData(data)
         })
-        // console.log("data2",data);
     },[currency])
-    // console.log("data3",data);
-    return data
-    
+    return data   
 }
 
 export default UseCurrencyInfo

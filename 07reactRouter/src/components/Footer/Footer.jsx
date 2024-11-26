@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link } from 'react-router-dom';
+import { Link} from 'react-router-dom';
 
 export default function Footer() {
     return (
@@ -20,7 +20,7 @@ export default function Footer() {
                             <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase">Resources</h2>
                             <ul className="text-gray-500 font-medium">
                                 <li className="mb-4">
-                                    <Link to="/" className="hover:underline">
+                                    <Link to="/" className={({isActive})=>`${isActive?"text-yellow-400":"text-gray-500"}hover:underline`}>
                                         Home
                                     </Link>
                                 </li>

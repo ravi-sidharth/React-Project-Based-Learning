@@ -1,11 +1,12 @@
 
 import React from 'react'
-function Card({Title,Heading }) {
+function Card({Title,Heading,Image,inStock}) {
+  
   return (
     <div>
       <div className="max-w-xs p-6 rounded-md shadow-md bg-black">
           <img
-            src="https://images.pexels.com/photos/29276458/pexels-photo-29276458.jpeg?cs=srgb&dl=pexels-vivek-tedla-2076460171-29276458.jpg&fm=jpg"
+            src={Image}
             alt=""
             className="object-cover object-center w-full rounded-md h-72 bg-gray-500"
           />
@@ -20,6 +21,7 @@ function Card({Title,Heading }) {
             amet
           </p>
         </div>
+        <button onClick={()=> {alert(`Sell! Sell@ Sell`)}} className={`px-2 py-1 ${inStock?"bg-blue-400":"bg-red-600"} rounded-md mt-2`}>{inStock?"In Stock":"Out Of Stock"}</button>
     </div>
   )
 }

@@ -10,7 +10,7 @@ function App() {
     {name:"Ram",age:20},
     {name:"Raju",age:19}
   ])
-
+  const [valx,setvalx]=useState("")
   const addValue =(PrevCounter) => {
     if (counter<20) {
       setCounter(PrevCounter => PrevCounter+1)

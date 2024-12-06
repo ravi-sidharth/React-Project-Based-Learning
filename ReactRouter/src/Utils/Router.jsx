@@ -5,7 +5,6 @@ import About from '../Components/About'
 import Contact from '../Components/Contact'
 import UserDetail from '../Components/UserDetail'
 
-
 function Router() {
   return (
     <Routes>
@@ -16,5 +15,4 @@ function Router() {
     </Routes>
   )
 }
-
 export default Router

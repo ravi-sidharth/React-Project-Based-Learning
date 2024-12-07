@@ -1,7 +1,7 @@
 import React from "react";
 
 function Card({data,handleClick,index}) {
-    const {img,Name,artist, added}=data
+    const {img,Name,artist,added}=data
     return (
         <div className="w-60 bg-zinc-200 flex gap-3 pb-6 relative">
             <div className="w-20 h-20 m-2 rounded-md bg-orange-500"><img className="w-full h-full" src={img} alt="" /></div>
